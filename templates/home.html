@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="loan.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan Classification</h1>
+      <style media="screen">
+        h1{
+            color:white;
+            text-align:center;
+            background:green;
+            background-size:auto;
+          }
+    body{
+      background: cyan;
+    }
+      </style>
+
+      <form class="form-horizontal" action="/predict" method="post">
+        <div class="form-group">
+          <div class="col-xs-4">
+            <label for="Principal">Principal</label>
+            <input type="text" name="Principal" id="Principal" class="form-control" placeholder="Enter amount" required><small> Enter only integer values</small>
+            </div>
+            <div class="col-xs-4">
+              <label for="Terms">Terms</label>
+              <input type="text" name="Terms" id="Terms" class="form-control" placeholder="Enter Terms" required><small> Enter only integer values</small>
+              </div>
+              <div class="col-xs-4">
+                <label for="past_due_days">Past_due_days</label>
+                <input type="text" name="past_due_days" id="past_due_days" class="form-control" placeholder="Enter past_due_days" required><small> Enter only integer values</small>
+                </div>
+                <div class="col-xs-4">
+                  <label for="age">Age</label>
+                  <input type="text" name="age" id="age" class="form-control" placeholder="Enter Age " required><small> Enter only between(25-60)</small>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="education" >Education</label>
+                    <select id="education" name="education" class="form-control">
+                          <option value="1">High School or Below</option>
+                          <option value="2">college</option>
+                          <option value="3">Bechalor</option>
+                          <option value="4">Master or Above</option>
+                      </select>
+                      </div>
+                      <div class="col-xs-4">
+                        <label for="gender" >Gender</label>
+                            <select id="gender" name="Gender" class="form-control">
+                              <option value="1">male</option>
+                              <option value="0">female</option>
+
+                          </select><br><br>
+                        </div>
+
+
+                      </div>
+
+                      <div class="col-xs-12">
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                        </div>
+      </form>
+
+
+        </div>
+
+
+
+  </body>
+</html>
